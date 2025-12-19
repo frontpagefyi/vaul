@@ -3,7 +3,9 @@
 import { useState } from 'react';
 import clsx from 'clsx';
 import { Drawer } from 'vaul';
-import { DrawerDirection } from 'vaul/src/types';
+
+// TODO: Export from Vaul
+export type DrawerDirection = 'top' | 'bottom' | 'left' | 'right';
 
 const CenteredContent = () => {
   return (

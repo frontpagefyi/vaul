@@ -3,7 +3,7 @@
 import { Drawer } from 'vaul';
 import { useState } from 'react';
 
-export function MyDrawer({
+function MyDrawer({
   open,
   setOpen,
   setOpen2,
@@ -93,7 +93,7 @@ export function MyDrawer({
   );
 }
 
-export function MyDrawer2({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void }) {
+function MyDrawer2({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void }) {
   return (
     <Drawer.Root open={open}>
       <Drawer.Portal>

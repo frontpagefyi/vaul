@@ -38,4 +38,4 @@ playwright-report/
 playwright/.cache/
 
 # styles
-style.css
+./style.css

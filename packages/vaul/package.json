@@ -22,7 +22,7 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "pnpm type-check && bunchee && pnpm copy-assets",
-    "copy-assets": "cp -r ./src/style.css ./style.css",
+    "copy-assets": "ncp ./src/style.css ./style.css",
     "dev": "bunchee --watch",
     "lint": "eslint src/"
   },
@@ -49,6 +49,7 @@
     "@types/react-dom": "catalog:",
     "bunchee": "^5.1.5",
     "eslint": "^7.32.0",
+    "ncp": "^2.0.0",
     "prettier": "^2.5.1",
     "react": "catalog:",
     "react-dom": "catalog:",

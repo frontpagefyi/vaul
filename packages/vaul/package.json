@@ -48,7 +48,7 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "bunchee": "^5.1.5",
-    "eslint": "^7.32.0",
+    "eslint": "catalog:",
     "ncp": "^2.0.0",
     "prettier": "^2.5.1",
     "react": "catalog:",

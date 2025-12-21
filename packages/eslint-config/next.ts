@@ -7,7 +7,7 @@ export default defineConfig(
   base,
   react,
   {
-    name: 'vaul-monorepo-next',
+    name: 'vaul-monorepo/next',
     files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
       '@next/next': next,
@@ -19,6 +19,6 @@ export default defineConfig(
   },
   globalIgnores(
     ['.next/', '.vercel/', 'node_modules/', 'next-env.d.ts'],
-    'vaul-monorepo-next-ignores',
+    'vaul-monorepo/next/ignores',
   ),
 );

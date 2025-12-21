@@ -12,7 +12,7 @@ export default defineConfig(
   importPlugin.flatConfigs.recommended,
   prettier,
   {
-    name: 'vaul-monorepo-base',
+    name: 'vaul-monorepo/base',
     languageOptions: {
       parserOptions: {
         projectService: true,

@@ -3,5 +3,5 @@ import next from '@repo/eslint-config/next';
 
 export default defineConfig(
   next,
-  globalIgnores(['playwright-report/', 'test-results/'], 'test-app-ignores'),
+  globalIgnores(['playwright-report/', 'test-results/'], 'test-app/ignores'),
 );

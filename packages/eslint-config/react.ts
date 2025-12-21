@@ -11,7 +11,7 @@ export default defineConfig(
   react.configs.flat.recommended,
   jsxA11y.flatConfigs.recommended,
   {
-    name: 'vaul-monorepo-react',
+    name: 'vaul-monorepo/react',
     settings: {
       react: {
         version: reactVersion,

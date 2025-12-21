@@ -1,4 +1,4 @@
-import { defineConfig } from 'eslint/config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import turbo from 'eslint-config-turbo/flat';
@@ -12,7 +12,7 @@ export default defineConfig(
   importPlugin.flatConfigs.recommended,
   prettier,
   {
-    name: 'vaul-monorepo/base',
+    name: 'vaul-eslint/base',
     languageOptions: {
       parserOptions: {
         projectService: true,
@@ -33,4 +33,8 @@ export default defineConfig(
       ],
     },
   },
+  globalIgnores(
+    ['.vercel/', '.turbo/', 'node_modules/'],
+    'vaul-eslint/base/ignores',
+  ),
 );

@@ -7,7 +7,7 @@ export default defineConfig(
   base,
   react,
   {
-    name: 'vaul-monorepo/next',
+    name: 'vaul-eslint/next',
     files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
       '@next/next': next,
@@ -17,8 +17,5 @@ export default defineConfig(
       ...next.configs['core-web-vitals'].rules,
     },
   },
-  globalIgnores(
-    ['.next/', '.vercel/', 'node_modules/', 'next-env.d.ts'],
-    'vaul-monorepo/next/ignores',
-  ),
+  globalIgnores(['.next/', 'next-env.d.ts'], 'vaul-eslint/next/ignores'),
 );

@@ -6,6 +6,7 @@
     "./*": "./*.ts"
   },
   "devDependencies": {
+    "@eslint/css": "^0.14.1",
     "@eslint/js": "^9.39.2",
     "@next/eslint-plugin-next": "^16.1.0",
     "@repo/typescript-config": "workspace:^",
@@ -14,9 +15,9 @@
     "@types/react": "catalog:",
     "eslint": "catalog:",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-config-turbo": "^2.7.1",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-config-turbo": "^2.7.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "react": "catalog:",

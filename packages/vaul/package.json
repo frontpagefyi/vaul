@@ -24,7 +24,7 @@
     "build": "pnpm type-check && bunchee && pnpm copy-assets",
     "copy-assets": "ncp ./src/style.css ./style.css",
     "dev": "bunchee --watch",
-    "lint": "eslint src/"
+    "lint": "eslint --flag unstable_native_nodejs_ts_config src/"
   },
   "keywords": [
     "react",

@@ -5,7 +5,8 @@ import { version as reactVersion } from 'react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default defineConfig(
-  reactHooks.configs.flat['recommended-latest'],
+  // TODO: switch to "recommended-latest" when we use react compiler
+  reactHooks.configs.flat['recommended'],
   // @ts-expect-error -- eslint-plugin-react won't update to support defineConfig: https://github.com/jsx-eslint/eslint-plugin-react/issues/3956
   react.configs.flat.recommended,
   jsxA11y.flatConfigs.recommended,

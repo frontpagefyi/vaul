@@ -12,7 +12,9 @@
       "ESNext.Array",
       "ESNext.Collection",
       "ESNext.Iterator",
-      "ESNext.Promise"
+      "ESNext.Promise",
+      "DOM",
+      "DOM.Iterable"
     ],
     "module": "NodeNext",
     "moduleDetection": "force",

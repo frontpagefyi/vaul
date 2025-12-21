@@ -8,7 +8,7 @@
     "incremental": false,
     "isolatedModules": true,
     "lib": [
-      "es2024",
+      "es2022",
       "ESNext.Array",
       "ESNext.Collection",
       "ESNext.Iterator",
@@ -24,7 +24,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2024",
+    "target": "ES2022",
     "forceConsistentCasingInFileNames": true,
     "exactOptionalPropertyTypes": true,
     "jsx": "react-jsx",

@@ -5,3 +5,7 @@ export interface SnapPoint {
 }
 
 export type AnyFunction = (...args: any) => any;
+
+export type SnapPointValue = number | string;
+export type SnapPoints = SnapPointValue[];
+export type ActiveSnapPoint = SnapPointValue | null;

@@ -131,7 +131,7 @@ export function useSnapPoints({
         return width;
       }) ?? []
     );
-  }, [snapPoints, windowDimensions, container]);
+  }, [snapPoints, windowDimensions, container, direction]);
 
   const activeSnapPointOffset = React.useMemo(() => {
     if (activeSnapPointIndex === null) return null;
@@ -182,12 +182,14 @@ export function useSnapPoints({
       setActiveSnapPoint(snapPoints?.[Math.max(newSnapPointIndex, 0)] ?? null);
     },
     [
-      drawerRef.current,
       snapPoints,
       snapPointsOffset,
       fadeFromIndex,
       overlayRef,
       setActiveSnapPoint,
+      direction,
+      drawerRef,
+      onSnapPointChange,
     ],
   );
 

@@ -34,7 +34,9 @@ export function set(
       return;
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
     originalStyles[key] = (el.style as any)[key];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
     (el.style as any)[key] = value;
   });
 
@@ -52,9 +54,12 @@ export function reset(el: Element | HTMLElement | null, prop?: string) {
   }
 
   if (prop) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
     (el.style as any)[prop] = originalStyles[prop];
   } else {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     Object.entries(originalStyles).forEach(([key, value]) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
       (el.style as any)[key] = value;
     });
   }
@@ -85,12 +90,14 @@ export function getTranslate(
   let mat = transform.match(/^matrix3d\((.+)\)$/);
   if (mat) {
     // https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d
+    // @ts-expect-error -- TODO: fix this ts error
     return parseFloat(mat[1].split(', ')[isVertical(direction) ? 13 : 12]);
   }
   // https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix
   mat = transform.match(/^matrix\((.+)\)$/);
   return mat
-    ? parseFloat(mat[1].split(', ')[isVertical(direction) ? 5 : 4])
+    ? // @ts-expect-error -- TODO: fix this ts error
+      parseFloat(mat[1].split(', ')[isVertical(direction) ? 5 : 4])
     : null;
 }
 

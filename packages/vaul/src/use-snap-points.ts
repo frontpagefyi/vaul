@@ -24,6 +24,7 @@ export function useSnapPoints({
   drawerRef,
   overlayRef,
   fadeFromIndex,
+  // eslint-disable-next-line @typescript-eslint/unbound-method
   onSnapPointChange,
   direction = 'bottom',
   container,

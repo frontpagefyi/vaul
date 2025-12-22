@@ -14,10 +14,13 @@ interface PreventScrollOptions {
   focusCallback?: () => void;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function chain(...callbacks: any[]): (...args: any[]) => void {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (...args: any[]) => {
     for (const callback of callbacks) {
       if (typeof callback === 'function') {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         callback(...args);
       }
     }
@@ -130,8 +133,10 @@ function preventScrollMobileSafari() {
       return;
     }
 
+    // eslint-disable-next-line baseline-js/use-baseline
     const touch = e.changedTouches[0];
     if (!touch) return;
+    // eslint-disable-next-line baseline-js/use-baseline
     lastY = touch.pageY;
   };
 
@@ -150,9 +155,11 @@ function preventScrollMobileSafari() {
     // of a nested scrollable area, otherwise mobile Safari will start scrolling
     // the window instead. Unfortunately, this disables bounce scrolling when at
     // the top but it's the best we can do.
+    // eslint-disable-next-line baseline-js/use-baseline
     const touch = e.changedTouches[0];
     if (!touch) return;
 
+    // eslint-disable-next-line baseline-js/use-baseline
     const y = touch.pageY;
     const scrollTop = scrollable.scrollTop;
     const bottom = scrollable.scrollHeight - scrollable.clientHeight;
@@ -292,14 +299,15 @@ function setStyle(
 function addEvent<K extends keyof GlobalEventHandlersEventMap>(
   target: EventTarget,
   event: K,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   handler: (this: Document, ev: GlobalEventHandlersEventMap[K]) => any,
   options?: boolean | AddEventListenerOptions,
 ) {
-  // @ts-ignore
+  // @ts-expect-error -- Types don't match
   target.addEventListener(event, handler, options);
 
   return () => {
-    // @ts-ignore
+    // @ts-expect-error -- Types don't match
     target.removeEventListener(event, handler, options);
   };
 }
@@ -326,7 +334,7 @@ function scrollIntoView(target: Element) {
       }
     }
 
-    // @ts-ignore
+    // @ts-expect-error -- target is Element, so parentElement is fine
     target = scrollable.parentElement;
   }
 }

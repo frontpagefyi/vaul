@@ -1085,6 +1085,7 @@ export const Content = React.forwardRef<HTMLDivElement, ContentProps>(function (
         }
 
         if (keyboardIsOpen.current) {
+          // eslint-disable-next-line react-hooks/immutability -- TODO: fix this
           keyboardIsOpen.current = false;
         }
       }}

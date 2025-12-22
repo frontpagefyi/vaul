@@ -135,7 +135,8 @@ export function usePositionFixed({
       const isStandalone = window.matchMedia(
         '(display-mode: standalone)',
       ).matches;
-      !isStandalone && setPositionFixed();
+
+      if (!isStandalone) setPositionFixed();
 
       if (!modal) {
         window.setTimeout(() => {

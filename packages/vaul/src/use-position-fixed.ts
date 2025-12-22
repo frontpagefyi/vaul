@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { isSafari } from './browser';
 
 let previousBodyPosition: Record<string, string> | null = null;

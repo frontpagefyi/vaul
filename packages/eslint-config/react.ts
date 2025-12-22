@@ -6,14 +6,16 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import baselineJs, { BASELINE } from 'eslint-plugin-baseline-js';
 
 export default defineConfig(
-  // TODO: switch to "recommended-latest" when we use react compiler
-  reactHooks.configs.flat['recommended'],
-  // @ts-expect-error -- eslint-plugin-react won't update to support defineConfig: https://github.com/jsx-eslint/eslint-plugin-react/issues/3956
-  react.configs.flat.recommended,
-  jsxA11y.flatConfigs.recommended,
   {
     name: 'vaul-eslint/react',
     files: ['**/*.{js,jsx,ts,tsx}'],
+    extends: [
+      // TODO: switch to "recommended-latest" when we use react compiler
+      reactHooks.configs.flat['recommended'],
+      // @ts-expect-error -- eslint-plugin-react won't update to support defineConfig: https://github.com/jsx-eslint/eslint-plugin-react/issues/3956
+      react.configs.flat.recommended,
+      jsxA11y.flatConfigs.recommended,
+    ],
     settings: {
       react: {
         version: reactVersion,
@@ -36,7 +38,13 @@ export default defineConfig(
       // https://react.dev/reference/eslint-plugin-react-hooks/lints/exhaustive-deps
       // 'react-hooks/exhaustive-deps': 'error',
     },
-    plugins: { 'baseline-js': baselineJs },
+  },
+  {
+    name: 'vaul-eslint/react/baseline-js',
+    files: ['**/*.{js,ts,mjs,jsx,tsx}'],
+    plugins: {
+      'baseline-js': baselineJs,
+    },
   },
   baselineJs.configs['recommended-ts']({
     available: BASELINE.WIDELY,

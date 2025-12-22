@@ -1,7 +1,7 @@
 'use client';
 
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import React from 'react';
+import * as React from 'react';
 import { isIOS, isMobileFirefox } from './browser';
 import {
   BORDER_RADIUS,

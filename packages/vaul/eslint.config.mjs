@@ -4,13 +4,13 @@ import react from '@repo/eslint-config/react';
 import globals from 'globals';
 
 export default defineConfig(
+  base,
+  react,
   {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     name: 'vaul-eslint/vaul',
     languageOptions: {
       globals: globals.browser,
     },
-    extends: [base, react],
   },
   globalIgnores(
     [

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import * as React from 'react';
 import { useDrawerContext } from './context';
 import { assignStyle, chain, isVertical } from './helpers';
 import { BORDER_RADIUS, TRANSITIONS, WINDOW_TOP_OFFSET } from './constants';
@@ -14,7 +14,7 @@ export function useScaleBackground() {
     noBodyStyles,
   } = useDrawerContext();
   const timeoutIdRef = React.useRef<number | null>(null);
-  const initialBackgroundColor = useMemo(
+  const initialBackgroundColor = React.useMemo(
     () => document.body.style.backgroundColor,
     [],
   );

@@ -2,6 +2,7 @@
   "name": "test-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,9 +23,6 @@
     "eslint": "catalog:",
     "postcss": "8.4.29",
     "typescript": "catalog:"
-  },
-  "imports": {
-    "#/*": "./src/*"
   },
   "dependencies": {
     "clsx": "^2.0.0",

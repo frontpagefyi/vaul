@@ -44,7 +44,7 @@ export interface WithoutFadeFromProps {
    * Should go from least visible. Example `[0.2, 0.5, 0.8]`.
    * You can also use px values, which doesn't take screen height into account.
    */
-  snapPoints?: (number | string)[];
+  snapPoints?: SnapPoints;
   fadeFromIndex?: never;
 }
 

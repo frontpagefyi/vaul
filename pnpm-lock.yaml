@@ -125,9 +125,6 @@ importers:
 
   packages/test-app:
     dependencies:
-      '@tailwindcss/postcss':
-        specifier: ^4.1.18
-        version: 4.1.18
       clsx:
         specifier: ^2.0.0
         version: 2.1.1
@@ -156,6 +153,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:^
         version: link:../typescript-config
+      '@tailwindcss/postcss':
+        specifier: ^4.1.18
+        version: 4.1.18
       '@types/node':
         specifier: 'catalog:'
         version: 22.19.3

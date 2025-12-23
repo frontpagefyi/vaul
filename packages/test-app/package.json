@@ -20,10 +20,10 @@
     "@types/react-dom": "catalog:",
     "eslint": "catalog:",
     "postcss": "8.4.29",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "@tailwindcss/postcss": "^4.1.18"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
     "clsx": "^2.0.0",
     "next": "catalog:",
     "react": "catalog:",

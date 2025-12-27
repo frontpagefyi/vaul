@@ -19,6 +19,7 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
       - run: pnpm install
+      - run: pnpm lint
       - run: pnpm build
       - run: pnpm --filter=test-app exec playwright install --with-deps
       - run: pnpm test || exit 1

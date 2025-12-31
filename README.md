@@ -1,4 +1,5 @@
 # Weasel
+
 > [!NOTE]
 > This project is a forked and maintained version of [Vaul](https://github.com/emilkowalski/vaul).
 
@@ -10,17 +11,21 @@ Weasel is an unstyled drawer component for React that can be used as a Dialog re
 ## Usage
 
 Install using npm, yarn, or pnpm:
+
 ```sh
 npm install weasel
 ```
+
 ```sh
 yarn add weasel
 ```
+
 ```sh
 pnpm add weasel
 ```
 
 Import the necessary components from the package:
+
 ```tsx
 import * as Drawer from 'weasel';
 

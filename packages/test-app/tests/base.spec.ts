@@ -40,7 +40,9 @@ test.describe('Base tests', () => {
     await expect(page.getByTestId('content')).not.toBeVisible();
   });
 
-  test('should be open by defafult when `defaultOpen` is true', async ({ page }) => {
+  test('should be open by defafult when `defaultOpen` is true', async ({
+    page,
+  }) => {
     await page.goto('/default-open');
 
     await expect(page.getByTestId('content')).toBeVisible();

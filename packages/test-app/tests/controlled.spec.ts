@@ -6,7 +6,9 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Initial-snap', () => {
-  test('should not close when clicked on overlay and only the open prop is passsed', async ({ page }) => {
+  test('should not close when clicked on overlay and only the open prop is passsed', async ({
+    page,
+  }) => {
     await expect(page.getByTestId('content')).not.toBeVisible();
     await page.getByTestId('trigger').click();
     await expect(page.getByTestId('content')).toBeVisible();
@@ -17,14 +19,20 @@ test.describe('Initial-snap', () => {
     await expect(page.getByTestId('content')).toBeVisible();
   });
 
-  test('should close when clicked on overlay and open and onOpenChange props are passed', async ({ page }) => {
-    await expect(page.getByTestId('fully-controlled-content')).not.toBeVisible();
+  test('should close when clicked on overlay and open and onOpenChange props are passed', async ({
+    page,
+  }) => {
+    await expect(
+      page.getByTestId('fully-controlled-content'),
+    ).not.toBeVisible();
     await page.getByTestId('fully-controlled-trigger').click();
     await expect(page.getByTestId('fully-controlled-content')).toBeVisible();
     // Click on the background
     await page.mouse.click(0, 0);
 
     await page.waitForTimeout(ANIMATION_DURATION);
-    await expect(page.getByTestId('fully-controlled-content')).not.toBeVisible();
+    await expect(
+      page.getByTestId('fully-controlled-content'),
+    ).not.toBeVisible();
   });
 });

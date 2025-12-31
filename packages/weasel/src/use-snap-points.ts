@@ -90,8 +90,8 @@ export function useSnapPoints({
           height: container.getBoundingClientRect().height,
         }
       : typeof window !== 'undefined'
-      ? { width: window.innerWidth, height: window.innerHeight }
-      : { width: 0, height: 0 };
+        ? { width: window.innerWidth, height: window.innerHeight }
+        : { width: 0, height: 0 };
 
     return (
       snapPoints?.map((snapPoint) => {
@@ -106,8 +106,8 @@ export function useSnapPoints({
           const height = isPx
             ? snapPointAsNumber
             : windowDimensions
-            ? snapPoint * containerSize.height
-            : 0;
+              ? snapPoint * containerSize.height
+              : 0;
 
           if (windowDimensions) {
             return direction === 'bottom'
@@ -120,8 +120,8 @@ export function useSnapPoints({
         const width = isPx
           ? snapPointAsNumber
           : windowDimensions
-          ? snapPoint * containerSize.width
-          : 0;
+            ? snapPoint * containerSize.width
+            : 0;
 
         if (windowDimensions) {
           return direction === 'right'

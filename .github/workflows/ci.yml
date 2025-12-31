@@ -85,7 +85,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           report-json: 'packages/**/eslint_report.json'
 
-  typecheck:
+  type-check:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -116,7 +116,7 @@ jobs:
         run: pnpm i
 
       - name: Run type checking
-        run: pnpm exec turbo run typecheck --affected
+        run: pnpm exec turbo run type-check --affected
 
   test:
     runs-on: ubuntu-latest
